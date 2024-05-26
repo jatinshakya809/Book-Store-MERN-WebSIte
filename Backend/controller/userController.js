@@ -79,7 +79,6 @@ export const updateUser = async (req, res) => {
     const { fullname, email, password } = req.body;
 
     const user = await User.findOne({ email });
-    console.log(user);
 
     if (!user) {
       return res.status(402).json({
