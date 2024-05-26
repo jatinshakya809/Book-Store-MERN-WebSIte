@@ -38,15 +38,15 @@ const Profile = () => {
   return (
     <div className="md:m-24 mx-2 mt-20 mb-6">
       <div className="md:w-[35vw]   duration-300 rounded-2xl md:hover:shadow-xl md:border-2 border-gray-300">
-        <h1 className="text-3xl mx-5 mt-3 mb-1">
+        <h1 className="text-2xl mx-5 mt-3 mb-1">
           Welcome <span className="text-pink-500">{user?.fullname}</span>,
         </h1>
         <h1 className="text-xl mx-5 md:flex ">
           Have a nice day.
-          <p className="text-red-500 mx-5 text-center">**Profile Editable**</p>
+          <p className="text-red-500 mx-5">**Profile Editable**</p>
         </h1>
 
-        <form className="p-5 md:pt-10 pt-5 space-y-5">
+        <form className="p-5 w-full md:pt-10 pt-5 space-y-5">
           <div>
             <label className="md:text-xl">Name: </label>
             <input
@@ -55,7 +55,7 @@ const Profile = () => {
               onChange={(e) => {
                 setFullName(e.target.value);
               }}
-              className="text-black bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
+              className="text-black w-full bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
             />
           </div>
           <div>
@@ -64,7 +64,7 @@ const Profile = () => {
               type="text"
               value={email}
               readOnly
-              className="text-black bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
+              className="text-black w-full bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
             />
           </div>
           <div>
@@ -75,7 +75,7 @@ const Profile = () => {
                 setPassword(e.target.value);
               }}
               type="password"
-              className="text-black bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
+              className="text-black w-full bg-transparent rounded-xl md:ml-3 text-[20px] outline-none border md:px-3 md:py-1.5 px-2 py-1"
             />
           </div>
           <div className="text-center">
