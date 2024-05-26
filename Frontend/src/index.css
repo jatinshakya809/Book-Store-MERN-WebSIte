@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+html{
+    background-color: white !important;
+}
+#root{
+    background-color: white !important;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    color: black;
+    user-select: none;
+  
+}
+.slick-arrow{
+    display: none !important;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
