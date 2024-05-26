@@ -20,7 +20,7 @@ const About = () => {
               saepe dolorum omnis facilis voluptatem temporibus voluptatum.
             </p>
           </div>
-          <div className="mt-2 md:mb-16 md:mb-0">
+          <div className="mt-2 md:mb-16 ">
             <p className="text-[20px]">Developed By:-</p>
             <h1 className="md:text-[70px] md:leading-none text-[40px]  ">
               Ja<span className="text-pink-500">tin </span>

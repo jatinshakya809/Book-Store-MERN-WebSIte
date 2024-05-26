@@ -19,7 +19,7 @@ const Login = () => {
       password: data.password,
     };
     await axios
-      .post("http://localhost:3000/user/login", userInfo)
+      .post(`${import.meta.env.VITE_RENDER_BACKEND_URL}/user/login`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

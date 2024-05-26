@@ -10,7 +10,9 @@ const HindiBooks = () => {
   useEffect(() => {
     const getHindiBook = async (req, res) => {
       try {
-        const books = await axios.get("http://localhost:3000/book/hindi");
+        const books = await axios.get(
+          `${import.meta.env.VITE_RENDER_BACKEND_URL}/book/hindi`
+        );
         setHindiBook(books.data.Hindibook);
       } catch (error) {
         console.log("Error in get hindi book ", error);
@@ -18,7 +20,7 @@ const HindiBooks = () => {
     };
     getHindiBook();
   }, []);
-  console.log(hindiBook);
+
   var settings = {
     dots: true,
     infinite: false,

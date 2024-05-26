@@ -12,11 +12,13 @@ const Course = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/book/get");
+        const res = await axios.get(
+          `${import.meta.env.VITE_RENDER_BACKEND_URL}/book/get`
+        );
         const filterBook = res.data.book.filter(
           (book) => book.category != "Free"
         );
-        console.log(res.data.book);
+
         setBook(filterBook);
       } catch (error) {
         console.log("Error in courses", error);

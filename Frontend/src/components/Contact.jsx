@@ -12,7 +12,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const contactDetails = await axios
-        .post("http://localhost:3000/contact/create", {
+        .post(`${import.meta.env.VITE_RENDER_BACKEND_URL}/contact/create`, {
           name,
           number,
           email,

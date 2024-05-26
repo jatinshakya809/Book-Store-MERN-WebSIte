@@ -26,7 +26,7 @@ const SignUp = () => {
     };
 
     await axios
-      .post("http://localhost:3000/user/signup", userData)
+      .post(`${import.meta.env.VITE_RENDER_BACKEND_URL}/user/signup`, userData)
       .then((res) => {
         if (res.data) {
           toast.success("Signup Successfully");

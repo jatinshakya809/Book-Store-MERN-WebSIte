@@ -14,11 +14,14 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put("http://localhost:3000/user/updateUser", {
-        fullname: fullname,
-        email: email,
-        password: password,
-      });
+      const res = await axios.put(
+        `${import.meta.env.VITE_RENDER_BACKEND_URL}/user/updateUser`,
+        {
+          fullname: fullname,
+          email: email,
+          password: password,
+        }
+      );
       if (res) {
         toast.success("Profile Updated Please Login");
         localStorage.removeItem("users");

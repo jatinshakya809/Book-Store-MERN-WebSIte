@@ -22,7 +22,7 @@ const ReadSection = () => {
     const getBookById = async () => {
       try {
         const desiredBook = await axios.get(
-          `http://localhost:3000/book/get/${
+          `${import.meta.env.VITE_RENDER_BACKEND_URL}/book/get/${
             bookId.id ? bookId.id : localStorage.getItem("BookId")
           }`
         );

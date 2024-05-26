@@ -12,7 +12,9 @@ const FreeBook = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/book/get");
+        const res = await axios.get(
+          `${import.meta.env.VITE_RENDER_BACKEND_URL}/book/get`
+        );
         const filterBook = res.data.book.filter(
           (book) => book.category === "Free"
         );
@@ -21,7 +23,7 @@ const FreeBook = () => {
     };
     getBook();
   }, []);
-  console.log(book);
+
   var settings = {
     dots: true,
     infinite: false,
