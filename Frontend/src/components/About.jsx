@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div className="md:flex justify-center items-center">
         <div className="md:px-24">
-          <img width="500px" src="/public/About.jpg" alt="" />
+          <img width="500px" src="/About.jpg" alt="" />
         </div>
         <div className="flex flex-col items-center md:mt-16 mt-6 ">
           <div>
